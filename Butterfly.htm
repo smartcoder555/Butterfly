@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butterfly</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f8ff;
+        }
+        .butterfly {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .wing {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle at 30% 30%, #ff69b4, #ff1493);
+            border-radius: 50%;
+        }
+        .wing.left {
+            transform: rotate(-45deg);
+            left: -50px;
+        }
+        .wing.right {
+            transform: rotate(45deg);
+            right: -50px;
+        }
+        .body {
+            position: absolute;
+            width: 20px;
+            height: 100px;
+            background: #8b4513;
+            left: 40px;
+            top: 0;
+            border-radius: 10px;
+        }
+        .antenna {
+            position: absolute;
+            width: 2px;
+            height: 30px;
+            background: #8b4513;
+            top: -30px;
+        }
+        .antenna.left {
+            left: 45px;
+            transform: rotate(-30deg);
+        }
+        .antenna.right {
+            right: 45px;
+            transform: rotate(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="butterfly">
+        <div class="wing left"></div>
+        <div class="wing right"></div>
+        <div class="body"></div>
+        <div class="antenna left"></div>
+        <div class="antenna right"></div>
+    </div>
+</body>
+</html>
